@@ -1,13 +1,10 @@
 # Quick reference
 
- - **Where to get help**:
-    https://github.com/scoriacorp/docker-tls-memcached
-
- - **Where to file issues**:
-    https://github.com/scoriacorp/docker-tls-memcached
-
  - **Maintained by**:
     [Moisés Guimarães](https://github.com/moisesguimaraes)
+
+ - **Where to get help or file issues**:
+    https://github.com/scoriacorp/docker-tls-memcached/issues
 
 # How to use this image
 
