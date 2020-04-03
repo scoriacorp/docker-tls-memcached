@@ -4,6 +4,8 @@ LABEL description="This image is built for TLS testing purposes."
 
 COPY ./certs/gen /opt/certs
 
+COPY ./debian/docker-entrypoint.sh /usr/local/bin/
+
 CMD [ \
     "memcached", \
     "-Z", \
