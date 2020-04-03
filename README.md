@@ -13,17 +13,21 @@
 
 This image runs a Memcached server with TLS enabled, so it will only accept TLS requests.
 
+The server's certificate Common Name (CN) is `*.localhost`, so you must use localhost:11211 when connecting to it and for now you must bind port 11211 to the host machine.
+
+```
+docker run --rm -p 11211:11211 scoriacorp/tls_memcached
+```
+
 The CA certificate can be extracted with:
 
 ```shell
-docker run --it scoriacorp/tls_memcached cat /opt/certs/crt/ca-root.crt
+docker run scoriacorp/tls_memcached cat /opt/certs/crt/ca-root.crt
 ```
-
-The server's certificate Common Name (CN) is `*.localhost`, so you must use localhost:11211 when connecting to it and for now you must bind port 11211 to the host machine.
 
 For client side authentication, trusted client credentials can be found at:
 
 ```
-docker run --it scoriacorp/tls_memcached cat /opt/certs/key/client.key
-docker run --it scoriacorp/tls_memcached cat /opt/certs/crt/client.crt
+docker run --rm scoriacorp/tls_memcached cat /opt/certs/key/client.key
+docker run --rm scoriacorp/tls_memcached cat /opt/certs/crt/client.crt
 ```
