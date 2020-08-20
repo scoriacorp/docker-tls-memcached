@@ -1,4 +1,4 @@
-FROM memcached:1.6.3
+FROM memcached:1.6.6
 
 LABEL description="This image is built for TLS testing purposes."
 
